@@ -1,31 +1,16 @@
-# Vehicles API
-------------------------
-An API services to maintain the Vehicles details include the price and the correct Location.
-## Feature
----------------
-- CRUD Rest API.
-- Swagger to document all the API.
-- MVC Testing with Mockito.
-- Auto mapping with Jpa.
+# ND035-P02-VehiclesAPI-Project
 
-### Run the Code
+Project repository for JavaND Project 2, where students implement a Vehicles API using Java and Spring Boot that can communicate with separate location and pricing services.
 
-To properly run this application you need to start the Pricing API and
-the Map API first.
+## Instructions
 
+Check each component to see its details and instructions. Note that all three applications
+should be running at once for full operation. Further instructions are available in the classroom.
 
-```
-$ mvn clean package
-```
+- [Vehicles API](./vehicles-api/README.md)
+- [Pricing Service](./pricing-service/README.md)
+- [Boogle Maps](./boogle-maps/README.md)
 
-```
-$ java -jar target/vehicles-api-0.0.1-SNAPSHOT.jar
-```
+## Dependencies
 
-Import it in your favorite IDE as a Maven Project.
-
-## Operations
-
-Swagger UI: http://localhost:8080/swagger-ui.html
-
-![SwaggerUI](/Swagger_UI.png)
+The project requires the use of Maven and Spring Boot, along with Java v11.
