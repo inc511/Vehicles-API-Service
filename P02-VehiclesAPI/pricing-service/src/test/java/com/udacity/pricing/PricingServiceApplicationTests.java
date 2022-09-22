@@ -27,18 +27,16 @@ public class PricingServiceApplicationTests {
 
 	@Autowired
 	private MockMvc mockMvc;
-	@MockBean
-	private PricingService pricingService;
 
 	@Test
 	public void contextLoads() {
 	}
 	@Test
 	public void getVehiclePrice() throws Exception {
-		long vehicleId = 1;
+		long testId = 51;
 
 		mockMvc.perform(get(new URI("/services/price"))
-				.param("vehicleId", String.valueOf(vehicleId))
+				.param("vehicleId", String.valueOf(testId))
 				.accept(MediaType.APPLICATION_JSON_UTF8)
 				.contentType(MediaType.APPLICATION_JSON_UTF8)).andExpect(status().isOk());
 	}

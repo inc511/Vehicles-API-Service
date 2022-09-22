@@ -124,13 +124,11 @@ public class VehiclesApiApplicationTests {
     }
 
     /**
-     * Creates an example Car object for use in testing.
+     * Mock a Car object for the unit test cases.
      *
-     * @return an example Car object
+     * @return a Car object
      */
     private Car getCar() {
-        Car car = new Car();
-        car.setLocation(new Location(40.8847320, -73.935242));
         Details details = new Details();
         Manufacturer manufacturer = new Manufacturer(99, "BMV");
         details.setManufacturer(manufacturer);
@@ -143,6 +141,8 @@ public class VehiclesApiApplicationTests {
         details.setModelYear(2020);
         details.setProductionYear(2021);
         details.setNumberOfDoors(4);
+        Car car = new Car();
+        car.setLocation(new Location(40.8847320, -73.935242));
         car.setDetails(details);
         car.setCondition(Condition.NEW);
         return car;
